@@ -6,12 +6,12 @@
 1. Clone repository
    Clone repository with HTTPS:
    ```bash
-   git clone
+   git clone https://github.com/spenceware-engineer/05bd91.git
    ```
    OR
    Clone repository with SSH:
    ```bash
-   git clone
+   git clone git@github.com:spenceware-engineer/05bd91.git
    ```
 2. Change directory to project directory
    ```bash
