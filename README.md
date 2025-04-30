@@ -4,30 +4,43 @@
 
 ## Clone, Install, and Run Project
 
-1. Clone repository
-   Clone repository with HTTPS:
+1. Clone, Install, and Run Server Repo
+   With HTTPS Clone URL:
    ```bash
-   git clone https://github.com/spenceware-engineer/05bd91.git
+   git clone https://github.com/spenceware-engineer/frontendchallengeserver.git
+   cd frontendchallengeserver
+   npm install
+   npm start
    ```
    OR
-   Clone repository with SSH:
+   With SSH Clone URL:
+   ```bash
+   git clone git@github.com:spenceware-engineer/frontendchallengeserver.git
+   cd frontendchallengeserver
+   npm install
+   npm start
+   ```
+2. Open new terminal window
+3. Clone, Install, and Run Journey Builder Project
+   With HTTPS Clone URL:
+   ```bash
+   git clone https://github.com/spenceware-engineer/05bd91.git
+   cd 05bd91
+   npm install
+   npm run dev
+   ```
+   OR
+   With SSH Clone URL:
    ```bash
    git clone git@github.com:spenceware-engineer/05bd91.git
-   ```
-2. Change directory to project directory
-   ```bash
    cd 05bd91
-   ```
-3. Install dependencies
-   ```bash
    npm install
+   npm run dev
    ```
-4. Run Application
-   ```bash
-   npm run start
-   ```
-5. Visit http://localhost:3000 to view and explore the running application
 
+> The running Journey Builder application can be accessed at http://localhost:3000
+
+> The data provided by the server can be found at http://localhost:3001/api/v1/x/actions/blueprints/x/x/graph
 
 ## Run Tests
 
@@ -66,4 +79,4 @@ npm run format
 ---
 
 ### Technologies
-TypeScript, Next.js, React.js, React Flow, Material UI, axios, Lodash, Cypress, Jest, CSS-in-JS, ESLint, Prettier
+TypeScript, Next.js, React.js, Zustand, React Flow, Material UI, Axios, Cypress, Jest, CSS Modules, ESLint, Prettier

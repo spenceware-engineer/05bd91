@@ -1,0 +1,35 @@
+.dataSrcBar {
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.dataSrcDisplay {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dataSrcLabel {
+  background-color: #0b5394ff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dataSrc {
+  padding: 10px;
+  border: 1px solid #171717;
+  border-radius: 5px;
+}
+
+.paramEditor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}

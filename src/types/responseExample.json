@@ -1,0 +1,215 @@
+{
+  "$schema": "https://example.com/schemas/ActionBlueprintGraphDescription.json",
+  "blueprint_id": "bp_12345",
+  "blueprint_name": "Customer Onboarding",
+  "branches": [
+    {
+      "$schema": "https://example.com/schemas/ActionBranchDescription.json",
+      "condition": {
+        "left": {
+          "object": "client",
+          "property": "name",
+          "type": "property"
+        },
+        "operator": "==",
+        "right": {
+          "type": "literal",
+          "value": "John"
+        },
+        "type": "binary"
+      },
+      "created_at": "2024-10-29T11:22:33.027873-03:00",
+      "created_by": "test@avantos.ai",
+      "description": "Description for example branch",
+      "id": "b_01jbcagb1wfy2v0g1xcq53y4rn",
+      "name": "Dummy Branch",
+      "tenant_id": "123",
+      "updated_at": "2024-10-29T11:22:33.02018-03:00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "string",
+      "target": "string"
+    }
+  ],
+  "forms": [
+    {
+      "$schema": "https://example.com/schemas/ActionFormDescription.json",
+      "created_at": "2024-01-01T00:00:00Z",
+      "created_by": "user@email.com",
+      "custom_javascript": "string",
+      "custom_javascript_triggering_fields": ["string"],
+      "description": "This is my form",
+      "dynamic_field_config": {
+        "property1": {
+          "endpoint_id": "string",
+          "output_key": "string",
+          "payload_fields": {
+            "property1": {
+              "component_key": "string",
+              "is_metadata": true,
+              "output_key": "string",
+              "type": "string"
+            },
+            "property2": {
+              "component_key": "string",
+              "is_metadata": true,
+              "output_key": "string",
+              "type": "string"
+            }
+          },
+          "selector_field": "string"
+        },
+        "property2": {
+          "endpoint_id": "string",
+          "output_key": "string",
+          "payload_fields": {
+            "property1": {
+              "component_key": "string",
+              "is_metadata": true,
+              "output_key": "string",
+              "type": "string"
+            },
+            "property2": {
+              "component_key": "string",
+              "is_metadata": true,
+              "output_key": "string",
+              "type": "string"
+            }
+          },
+          "selector_field": "string"
+        }
+      },
+      "field_schema": {
+        "properties": {
+          "property1": null,
+          "property2": null
+        },
+        "required": ["string"],
+        "type": "string"
+      },
+      "id": "f_456",
+      "is_reusable": true,
+      "name": "My Form",
+      "ui_schema": {
+        "elements": [null],
+        "type": "string"
+      },
+      "updated_at": "2024-01-01T00:00:00Z",
+      "vendor_schema": {
+        "property1": null,
+        "property2": null
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "data": {
+        "approval_auto_assign_config": {
+          "form_field": "string",
+          "form_key": "string",
+          "type": "client_org_role",
+          "value": "string"
+        },
+        "approval_required": false,
+        "approval_roles": ["string"],
+        "approval_scheduled_delay": {
+          "number": 1,
+          "unit": "minutes"
+        },
+        "approval_sla_duration": {
+          "number": 1,
+          "unit": "minutes"
+        },
+        "approval_task_name": "string",
+        "auto_assign_config": {
+          "form_field": "string",
+          "form_key": "string",
+          "type": "client_org_role",
+          "value": "string"
+        },
+        "component_id": "f_12345",
+        "component_key": "component-key-1",
+        "component_type": "form",
+        "data_promotion_config": {
+          "property1": "string",
+          "property2": "string"
+        },
+        "id": "bp_c_12345",
+        "input_mapping": {
+          "property1": {
+            "component_key": "string",
+            "is_metadata": true,
+            "output_key": "string",
+            "type": "string"
+          },
+          "property2": {
+            "component_key": "string",
+            "is_metadata": true,
+            "output_key": "string",
+            "type": "string"
+          }
+        },
+        "name": "Customer Onboarding",
+        "permitted_roles": ["string"],
+        "prerequisites": ["string"],
+        "scheduled_delay": {
+          "number": 1,
+          "unit": "minutes"
+        },
+        "sla_duration": {
+          "number": 1,
+          "unit": "minutes"
+        },
+        "state_transition_rules": {
+          "state_transition_rules_if": {
+            "component_key": "string",
+            "is_metadata": true,
+            "output_key": "string",
+            "type": "string"
+          },
+          "state_transition_rules_then": "pending_approval"
+        }
+      },
+      "id": "string",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "type": "form"
+    }
+  ],
+  "status": "draft",
+  "tenant_id": "t_67890",
+  "triggers": [
+    {
+      "$schema": "https://example.com/schemas/TriggerEndpointDescription.json",
+      "created_at": "2021-01-01T00:00:00Z",
+      "id": "te_213j32",
+      "max_retries": 3,
+      "name": "Send Email",
+      "output_mapping": {
+        "id": ".data.value.id"
+      },
+      "path_template": "/api/v1/customer/{{.customer_id}}/do/something/",
+      "path_template_variables": ["customer_id"],
+      "payload_template": {
+        "subject": "{{.subject}}",
+        "to": "{{.to}}"
+      },
+      "payload_template_variables": ["to", "subject"],
+      "query_parameter_template": {
+        "user_id": "{{.user_id}}"
+      },
+      "query_parameter_template_variables": ["user_id"],
+      "request_method": "POST",
+      "timeout_seconds": 10,
+      "trigger_service_id": "ts_213j32",
+      "updated_at": "2021-01-01T00:00:00Z"
+    }
+  ],
+  "version_id": "bpv_123",
+  "version_notes": "Initial draft",
+  "version_number": "v1.0.0"
+}
